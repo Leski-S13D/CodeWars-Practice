@@ -1,0 +1,20 @@
+Question:
+Trolls are attacking your comment section!
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+Note: for this kata y isn't considered a vowel.
+
+Answer1:
+一个重要的思维，并不需要真的去剔除每个元素，可以逆向思维，把需要留下来的元素加入新列表
+def disemvowel(string_):
+    new=[]
+    v=['a','e','i','o','u']
+    for i in string_:
+        if i.lower() not in v:
+            new.append(i)
+    return ''.join(new)
+    
+Answer2:
+def disemvowel(string):
+    return "".join(c for c in string if c.lower() not in "aeiou")
