@@ -1,0 +1,18 @@
+Question:
+Very simple, given an integer or a floating-point number, find its opposite.
+Examples:
+1: -1
+14: -14
+-34: 34
+
+Answer1:
+def opposite(number):
+    return 0-number
+
+Answer2:
+def opposite(number):
+    return -number
+
+Answer3:
+def opposite(number):
+    return -1 * number
