@@ -1,0 +1,20 @@
+Question:
+ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+If the function is passed a valid PIN string, return true, else return false.
+Examples (Input --> Output)
+"1234"   -->  true
+"12345"  -->  false
+"a234"   -->  false
+
+Answer1:
+def validate_pin(pin):
+    if len(pin) == 4 or len(pin) == 6:
+        return pin.isnumeric()
+        #isnumberc方法用于判断字符串内的字符是否是数字
+    else:
+        return False
+        
+Answer2:
+def validate_pin(pin):
+    return len(pin) in (4, 6) and pin.isdigit()
+    #isdigit() 方法检测字符串是否只由数字组成，只对 0 和 正数有效
